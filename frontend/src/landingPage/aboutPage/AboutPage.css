@@ -1,0 +1,72 @@
+/* --- General Page & Typography --- */
+body {
+  background-color: #f7f9fc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.section-heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2c3e50; /* Darker text for headings */
+}
+
+.lead-text {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* --- 1. Feature Icon Grid Styling --- */
+.feature-item {
+  padding: 0 15px;
+}
+
+.icon-container-feature {
+  width: 90px;
+  height: 90px;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-container-feature i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.feature-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.feature-description {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* --- 2. Our Commitment Block Styling --- */
+.commitment-block {
+  max-width: 900px;
+  border-radius: 2rem; /* Large corner radius */
+  background-color: rgb(250, 248, 252); /* Soft lavender background */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.commitment-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.commitment-text {
+  font-size: 1.05rem;
+  color: #4a5a6a;
+  line-height: 1.7;
+  max-width: 700px;
+}
