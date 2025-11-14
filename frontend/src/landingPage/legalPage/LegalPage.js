@@ -1,5 +1,6 @@
 import React from "react";
 import "./LegalPage.css"; // Import the custom CSS file
+import Navbar from '../Navbar';
 
 // Data structure for the legal resources
 const legalResources = {
@@ -38,6 +39,8 @@ const legalResources = {
 
 function LegalResources() {
   return (
+    <>
+    <Navbar/>
     <div className="legal-page-container pt-4 pb-5">
       <div className="container">
         
@@ -110,6 +113,7 @@ function LegalResources() {
 
       </div>
     </div>
+    </>
   );
 }
 

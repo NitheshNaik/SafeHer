@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./CancerPage.css"; 
+import Navbar from '../Navbar';
 
 // Mock Data for educational content
 const educationalContent = {
@@ -78,6 +79,8 @@ function BreastCheck() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="breast-page-container pt-4 pb-5">
       <div className="container">
         
@@ -166,6 +169,7 @@ function BreastCheck() {
 
       </div>
     </div>
+    </>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./BMIpage.css"; 
+import Navbar from '../Navbar';
 
 // Helper function to calculate BMI (unchanged)
 const calculateBMI = (height, weight, unit) => {
@@ -65,6 +66,8 @@ function BMICalculator() {
   const resultClass = getResultClass(category); // Get the dynamic class here
 
   return (
+    <>
+    <Navbar/>
     <div className="bmi-page-container pb-5">
       <div className="container">
         
@@ -181,6 +184,7 @@ function BMICalculator() {
 
       </div>
     </div>
+    </>
   );
 }
 

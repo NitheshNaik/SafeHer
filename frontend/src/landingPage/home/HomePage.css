@@ -1,0 +1,66 @@
+/* --- Page Container (Background Glow) --- */
+.home-page-container {
+    /* Soft pinkish-lavender glow background (consistent theme) */
+    background-color: rgb(253, 248, 255); 
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* --- Welcome Card Styling --- */
+.welcome-card {
+    background-color: white; 
+    border-radius: 1.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); 
+    max-width: 450px; 
+    width: 100%;
+}
+
+/* --- Icon and Heading --- */
+.welcome-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Theme Gradient (Purple/Pink) */
+    background: linear-gradient(135deg, #a855f7, #ec4899); 
+    font-size: 2rem;
+    color: white;
+    margin: 0 auto;
+}
+
+.welcome-heading {
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+.username-highlight {
+    color: #a855f7; /* Purple accent for the username */
+}
+
+.welcome-subtext {
+    font-size: 1rem;
+}
+
+/* --- Logout Button --- */
+.btn-logout {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.75rem;
+    
+    /* Blue/Cyan Gradient for a prominent action button */
+    background: linear-gradient(135deg, #3b82f6, #06b6d4); 
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-logout:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(59, 130, 246, 0.4);
+}

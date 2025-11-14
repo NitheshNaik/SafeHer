@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./ContactPage.css"; 
+import Navbar from '../Navbar';
 
 function ContactPage() {
   const [formData, setFormData] = useState({
@@ -26,6 +27,8 @@ function ContactPage() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="contact-page-container d-flex justify-content-center align-items-center py-5">
       <div className="container contact-max-width">
         
@@ -154,6 +157,7 @@ function ContactPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

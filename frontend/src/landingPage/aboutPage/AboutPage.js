@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutPage.css"; // Import the custom CSS file
+import Navbar from '../Navbar';
 
 // Helper component for the Feature Grid items
 const FeatureIcon = ({ title, description, iconClass, iconBgColor }) => (
@@ -43,7 +44,10 @@ function AboutSafeHer() {
   ];
 
   return (
+    <>
+    {/* <Navbar/> */}
     <div className="safeher-page-container">
+      
       
       {/* 1. About SafeHer (Intro) - Changed py-5 to py-3 */}
       <section className="container py-3">
@@ -75,6 +79,7 @@ function AboutSafeHer() {
       </section>
 
     </div>
+    </>
   );
 }
 
