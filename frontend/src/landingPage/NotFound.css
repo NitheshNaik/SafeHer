@@ -1,0 +1,59 @@
+/* --- Page Container --- */
+.not-found-container {
+  background-color: #f7f9fc; /* Soft background */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* --- Content Block Styling --- */
+.not-found-content {
+  max-width: 600px;
+  background-color: rgb(250, 248, 252); /* Light Lavender background from commitment block */
+  border-radius: 2rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05); /* Subtle lift */
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  margin-top: -20vh;
+}
+
+/* --- Typography --- */
+.error-code {
+  font-size: 8rem; /* Large, eye-catching number */
+  font-weight: 900;
+  /* Use a subtle gradient or soft shadow for the number */
+  color: #a855f7; /* Primary gradient start color */
+  text-shadow: 2px 2px 8px rgba(168, 85, 247, 0.3);
+}
+
+.error-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.error-description {
+  font-size: 1.1rem;
+  color: #5d6d7e;
+  line-height: 1.6;
+}
+
+/* --- Home Button Styling --- */
+.btn-home-safeher {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px; /* Pill shape */
+  
+  /* Gradient Background similar to the icons */
+  background: linear-gradient(135deg, #3b82f6, #06b6d4); /* Blue/Cyan Gradient */
+  color: white;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-home-safeher:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4); /* Colored shadow on hover */
+  color: white; /* Keep text white */
+}

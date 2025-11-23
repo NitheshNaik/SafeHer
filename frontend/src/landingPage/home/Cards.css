@@ -1,0 +1,91 @@
+/* --- General Container Styling --- */
+body {
+  background-color: #f7f9fc; /* A very light, soft background for the whole page */
+}
+
+/* --- Card Styling (.modern-card-v2) --- */
+.modern-card-v2 {
+  /* Dimensions and Shape */
+  border-radius: 1.5rem; /* Large, rounded corners */
+  min-height: 250px; /* Ensure a consistent height */
+  position: relative; /* Needed for positioning the explore link relative to the card */
+  
+  /* Appearance */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Very light border */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Subtle lift effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Text Styles */
+  color: #333;
+  /* Add padding-bottom to account for the explore link moving up */
+  padding-bottom: 3.5rem !important; /* Adjust as needed */
+}
+
+.modern-card-v2:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Slightly more pronounced shadow */
+}
+
+/* --- Icon Container Styling --- */
+.icon-container-v2 {
+  width: 65px;
+  height: 65px;
+  border-radius: 1rem; /* Rounded square icon background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Shadow for the icon container itself */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); 
+}
+
+.icon-container-v2 i {
+  font-size: 1.8rem;
+  color: white; /* White icon color for contrast against the gradient background */
+}
+
+/* --- Typography Styling --- */
+.card-title-v2 {
+  font-size: 1.25rem;
+  font-weight: 600; /* Semi-bold */
+  margin-bottom: 0.5rem;
+  color: #212529; /* Darker color for the title */
+}
+
+.card-text-v2 {
+  font-size: 1rem;
+  color: #6c757d; /* Muted color for the description */
+  line-height: 1.5;
+}
+
+/* --- Explore Link Styling --- */
+.explore-link {
+  /* Positioning at the bottom of the card */
+  position: absolute;
+  bottom: 1.5rem; /* Distance from the bottom of the card */
+  left: 1.5rem; /* Distance from the left of the card */
+  
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6c757d; /* Consistent muted color */
+  text-decoration: none;
+  
+  /* Initial hidden state */
+  opacity: 0;
+  transform: translateY(10px); /* Slightly move it down */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Show explore link on hover of the parent card */
+.modern-card-v2:hover .explore-link {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move back to original position */
+}
+
+.explore-link i {
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+/* Ensure the cards have enough padding at the bottom so the "Explore" link doesn't overlap text */
+/* This is already handled by padding-bottom on .modern-card-v2 */

@@ -1,0 +1,68 @@
+/* --- Navbar Container --- */
+.safeher-navbar {
+    background-color: white !important; /* Ensure white background */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Soft, modern shadow */
+    transition: all 0.3s ease;
+}
+
+/* --- Brand/Logo Styling --- */
+.navbar-brand-text {
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 1.5rem;
+}
+
+.navbar-logo-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Purple/Pink Gradient (consistent with BMI card) */
+    background: linear-gradient(135deg, #a855f7, #ec4899); 
+}
+
+.navbar-logo-icon i {
+    font-size: 1rem;
+    color: white;
+}
+
+/* --- Navigation Links Styling --- */
+.safeher-nav-link {
+    color: #5d6d7e !important; /* Muted text color */
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.safeher-nav-link:hover,
+.safeher-nav-link.active {
+    color: #a855f7 !important; /* Purple accent color on hover/active */
+    background-color: rgba(168, 85, 247, 0.05); /* Very light background glow */
+}
+
+/* --- Profile Section Styling --- */
+.profile-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.profile-icon-wrapper {
+    font-size: 1.8rem;
+    color: #3b82f6; /* Blue accent color for the profile icon */
+    transition: color 0.2s ease;
+}
+
+.profile-icon-wrapper i {
+    /* Optional: Slight color change on hover */
+    transition: color 0.2s ease;
+}
+
+.profile-link:hover .profile-icon-wrapper {
+    color: #2980b9;
+}

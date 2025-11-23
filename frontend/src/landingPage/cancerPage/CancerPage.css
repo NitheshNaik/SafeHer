@@ -1,0 +1,213 @@
+/* Inherit Global Theme Styles */
+.breast-page-container {
+  /* Soft pinkish-lavender glow background */
+  background-color: rgb(253, 248, 255); 
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.container {
+    max-width: 900px;
+}
+
+/* --- Header Styling --- */
+.check-header-icon-container {
+    width: 45px;
+    height: 45px;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Hot Pink Gradient for Breast Cancer Awareness */
+    background: linear-gradient(135deg, #f43f5e, #ec4899); 
+}
+
+.check-header-icon-container i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.check-header-title {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.card-section-title {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.25rem;
+}
+
+/* --- Main Card Styling (Upload) --- */
+.check-card-main {
+    background-color: white; 
+    border-radius: 1.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    max-width: 650px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Upload Area --- */
+.upload-area {
+    border: 2px dashed #f43f5e; /* Hot Pink dashed border */
+    border-radius: 1rem;
+    background-color: rgb(255, 245, 250); /* Light pink background */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.upload-area:hover {
+    background-color: rgb(255, 240, 245);
+}
+
+.upload-label {
+    cursor: pointer;
+    color: #f43f5e;
+}
+
+.upload-icon {
+    font-size: 3rem;
+    display: block;
+}
+
+.img-preview {
+    max-width: 100%;
+    max-height: 200px;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: contain;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* --- Scan Button --- */
+.btn-scan-image {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.75rem;
+    
+    /* Hot Pink Gradient */
+    background: linear-gradient(135deg, #f43f5e, #ec4899); 
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-scan-image:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 15px rgba(244, 63, 94, 0.4);
+}
+.btn-scan-image:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* --- Result Display --- */
+.scan-result-box {
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-heading {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Result Color Coding */
+.scan-result-box.result-high {
+    background-color: #fef2f2; /* Very light red */
+    border: 1px solid #ef4444; 
+    color: #b91c1c; 
+}
+.result-high .result-risk {
+    color: #ef4444; 
+}
+
+.scan-result-box.result-moderate {
+    background-color: #fffbeb; /* Very light yellow */
+    border: 1px solid #f59e0b; 
+    color: #92400e; 
+}
+.result-moderate .result-risk {
+    color: #f59e0b;
+}
+
+.scan-result-box.result-low {
+    background-color: #f0fff4; /* Very light green */
+    border: 1px solid #10b981; 
+    color: #065f46; 
+}
+.result-low .result-risk {
+    color: #10b981;
+}
+
+.scan-result-box.result-error {
+    background-color: #f3f4f6;
+    border: 1px solid #6b7280;
+    color: #374151;
+}
+.result-error .result-risk {
+    color: #4b5563;
+}
+
+/* --- Educational Content Card --- */
+.check-card-info {
+    background-color: rgb(245, 249, 253); /* Light Blue background for info */
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+.info-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #5d6d7e;
+}
+.info-list li::before {
+    content: "\2713"; /* Checkmark symbol */
+    color: #f43f5e; /* Hot Pink checkmark */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.risk-factors-list li::before {
+    content: "\2022"; /* Bullet point */
+    color: #f59e0b; /* Yellow/Orange dot */
+}
+
+/* --- CRITICAL DISCLAIMER BOX STYLING --- */
+.check-disclaimer-box {
+    max-width: 650px;
+    background-color: #ffebeb; /* Soft red background */
+    border: 2px solid #ef4444; /* Stark red border */
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.2);
+}
+
+.disclaimer-text-check {
+    font-size: 0.95rem;
+    color: #b91c1c; /* Dark red text */
+    font-weight: 500;
+}
+
+.disclaimer-text-check strong {
+    font-weight: 800;
+}
+
+.disclaimer-text-check i {
+    font-size: 1.2rem;
+    color: #ef4444;
+}

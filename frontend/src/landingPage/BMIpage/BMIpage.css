@@ -1,0 +1,310 @@
+/* --- Page Container and Typography --- */
+.bmi-page-container {
+  /* UPDATED BACKGROUND: Soft pinkish-lavender glow */
+  background-color: rgb(253, 248, 255); 
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Limit max width for a centered content look */
+.container {
+    max-width: 900px;
+}
+
+.card-section-title {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.25rem;
+}
+
+/* --- Header and Back Button --- */
+
+.bmi-header-wrapper {
+    /* Ensure the wrapper itself is centered and spaced correctly */
+    padding-top: 1rem;
+    position: relative; 
+}
+
+/* Updated icon container for placement */
+.bmi-header-icon-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #a855f7, #ec4899); /* Purple/Pink Gradient */
+}
+
+.bmi-header-icon-container i {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.bmi-header-title {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* --- Main Card Styling (Input and Calculation) --- */
+.bmi-card-main {
+    /* Main card color (slightly different from the light background) */
+    background-color: white; 
+    border-radius: 1.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+}
+
+/* --- Unit Toggle Buttons --- */
+.unit-toggle-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d9e6;
+    background-color: transparent;
+    color: #6c757d;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.unit-toggle-btn:first-child {
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+}
+
+.unit-toggle-btn:last-child {
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+
+.unit-toggle-btn.active {
+    background-color: #3b82f6; /* Blue active color */
+    color: white;
+    border-color: #3b82f6;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+/* --- Input Group Styling --- */
+.input-group-bmi {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-label {
+    display: block;
+    font-weight: 500;
+    color: #5d6d7e;
+    margin-bottom: 0.5rem;
+}
+
+.input-with-unit {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d9e6;
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    background-color: white;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-with-unit:focus-within {
+    border-color: #a855f7; /* Focus color */
+    box-shadow: 0 0 0 0.25rem rgba(168, 85, 247, 0.1);
+}
+
+.bmi-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 0 0.5rem;
+    font-size: 1rem;
+    background: none;
+}
+
+.bmi-input:focus {
+    box-shadow: none;
+}
+
+.input-unit-label {
+    color: #5d6d7e;
+    font-weight: 500;
+    padding-right: 0.5rem;
+}
+
+/* --- Calculate Button --- */
+.btn-calculate-bmi {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.75rem;
+    
+    /* Hot Pink Gradient */
+    background: linear-gradient(135deg, #f43f5e, #ec4899); 
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-calculate-bmi:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 15px rgba(244, 63, 94, 0.4);
+}
+
+/* --- BMI Result Display --- */
+.bmi-result-display {
+    background-color: rgba(59, 130, 246, 0.05); /* Very light blue background */
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.bmi-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3b82f6; /* Blue accent */
+    margin-right: 0.5rem;
+}
+
+.bmi-category {
+    font-weight: 600;
+    color: #10b981; /* Green accent */
+}
+
+/* --- Info Cards (Understanding & Limitations) --- */
+.bmi-card-info {
+    /* Soft white/off-white background for secondary cards */
+    background-color: white; 
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+    max-width: 600px;
+}
+
+.bmi-info-text {
+    font-size: 0.95rem;
+    color: #5d6d7e;
+}
+
+.info-subsection-title {
+    font-weight: 600;
+    color: #2c3e50;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 0.5rem;
+}
+
+/* BMI Categories List */
+.bmi-category-list {
+    margin-bottom: 0;
+}
+
+.bmi-category-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    color: #34495e;
+}
+
+.bmi-category-item:last-child {
+    border-bottom: none;
+}
+
+.category-name {
+    font-weight: 500;
+}
+
+.category-range {
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.active-category .category-name, 
+.active-category .category-range {
+    color: #3b82f6; /* Highlight active category */
+    font-weight: 700;
+}
+
+/* Limitations List */
+.limitations-list {
+    padding-left: 20px;
+    font-size: 0.95rem;
+    color: #5d6d7e;
+}
+
+.limitations-list li {
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.limitations-list li::before {
+    content: "\2022"; /* Bullet point */
+    color: #a855f7; /* Purple bullet */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* --- Disclaimer Box --- */
+.disclaimer-bmi-box {
+    max-width: 600px;
+    background-color: rgb(255, 245, 250); /* Light Pink/Red background */
+    border: 1px solid rgba(244, 63, 94, 0.2); /* Soft red border */
+    border-radius: 1rem;
+}
+
+.disclaimer-text-bmi {
+    font-size: 0.9rem;
+    color: #d83b5b; /* A soft red color */
+}
+
+.disclaimer-text-bmi strong {
+    font-weight: 700;
+}
+
+/* --- BMI Result Display --- */
+
+/* Base style reset for the dynamic classes */
+.bmi-result-display {
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    /* Resetting base appearance */
+    background-color: white; 
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+}
+
+/* 1. Light Modern Green Glow (Healthy Weight) */
+.bmi-result-display.bmi-healthy {
+    background-color: rgb(240, 255, 245); /* Very light green */
+    border-color: rgba(16, 185, 129, 0.3); /* Green border */
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2); /* Soft green glow */
+}
+
+/* 2. Red Glow (Underweight, Overweight, Obese) */
+.bmi-result-display.bmi-risk {
+    background-color: rgb(255, 245, 245); /* Very light red/pink */
+    border-color: rgba(244, 63, 94, 0.3); /* Red border */
+    box-shadow: 0 4px 15px rgba(244, 63, 94, 0.2); /* Soft red glow */
+}
+
+.bmi-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3b82f6; 
+    margin-right: 0.5rem;
+}
+
+.bmi-category {
+    font-weight: 600;
+    color: #10b981; 
+}

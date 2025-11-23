@@ -1,0 +1,65 @@
+/* --- Footer Container --- */
+.safeher-footer {
+  background-color: rgb(245, 249, 253); /* Light Blue/Gray background for the footer */
+  border-top: 1px solid rgba(0, 0, 0, 0.05); /* Soft border at the top */
+  color: #34495e;
+}
+
+/* --- Typography and Headings --- */
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3b82f6; /* Use a primary brand color */
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.footer-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* --- Navigation Links --- */
+.footer-link {
+  color: #5d6d7e;
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 2;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #3b82f6; /* Highlight on hover */
+}
+
+/* --- Social Media Icons --- */
+.social-link {
+    font-size: 1.5rem;
+    color: #7f8c8d;
+    transition: color 0.2s ease;
+}
+
+.social-link:hover {
+    color: #3b82f6;
+}
+
+
+.copyright-text, .legal-link {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}
+
+.legal-link {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.legal-link:hover {
+    color: #5d6d7e;
+}
+
