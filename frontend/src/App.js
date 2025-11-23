@@ -7,10 +7,11 @@ import AboutPage from './landingPage/aboutPage/AboutPage';
 import NotFound from './landingPage/NotFound';
 import BMIpage from './landingPage/BMIpage/BMIpage';
 import SafetyPage from './landingPage/safetyPage/SafetyPage';
-import CancerPage from './landingPage/cancerPage/CancerPage';
+// import CancerPage from './landingPage/cancerPage/CancerPage';
 import LegalPage from './landingPage/legalPage/LegalPage';
 import ForgotPasswordPage from './landingPage/forgetPass/ForgetPassPage';
 import ContactPage from './landingPage/contactPage/ContactPage';
+import BreastScanUpload from "./landingPage/cancerPage/BreastCancerUpload";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/bmi" element={<BMIpage />} />
         <Route path="/safety" element={<SafetyPage />} />
-        <Route path="/cancer" element={<CancerPage />} />
+        <Route path="/cancer" element={<BreastScanUpload />} />
         <Route path="/legal" element={<LegalPage />} />
         <Route path="/forgot" element={<ForgotPasswordPage />} />
         <Route path="/contact" element={<ContactPage />} />

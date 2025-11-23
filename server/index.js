@@ -1,17 +1,19 @@
-// index.js (UPDATED CODE)
+// index.js (ES Module Syntax)
 
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+import "dotenv/config"; // 💡 Standard way to load .env in ESM (replaces require("dotenv").config())
+import cookieParser from "cookie-parser";
+// Ensure these local route files use default exports and are named with .js extension
+import authRoute from "./Routes/AuthRoute.js"; 
+import smsRoute from "./Routes/smsRoute.js";
+import aiRoutes from './Routes/aiRoutes.js';
+
 const app = express();
-require("dotenv").config();
-const cookieParser = require("cookie-parser");
-const authRoute = require("./Routes/AuthRoute");
-const smsRoute = require("./Routes/smsRoute");
 
-// const { MONGO_URL, PORT } = process.env;
 const MONGO_URL = process.env.MONGO_URL;
-const PORT = process.env.port || 4000;
+const PORT = process.env.PORT || 4000; // 💡 It's convention to use all caps for environment variables like PORT
 
 // --- 1. Middleware Setup (Execute BEFORE app.listen) ---
 app.use(
@@ -27,6 +29,7 @@ app.use(express.json()); // Essential for parsing JSON request bodies
 // --- 2. Route Middleware ---
 app.use("/", authRoute);
 app.use("/api", smsRoute);
+app.use('/api/ai', aiRoutes);
 
 // --- 3. Database Connection ---
 mongoose.connect(MONGO_URL, {

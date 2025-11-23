@@ -1,6 +1,9 @@
-const express = require("express");
-const router = express.Router();
-const twilio = require("twilio");
+// SAFEHER-MAIN/server/Routes/smsRoute.js
+
+import express from "express"; // 1. Import express
+import twilio from "twilio";   // 2. Import twilio
+
+const router = express.Router(); // 3. Initialize Router
 
 const client = twilio(
   process.env.TWILIO_ACCOUNT_SID,
@@ -18,7 +21,8 @@ router.post("/send-sms", async (req, res) => {
       });
     }
 
-    const locationUrl = `https://www.google.com/maps?q=${lat},${lng}`;
+    // 💡 Fix: Ensure the location URL is properly formatted for Google Maps
+    const locationUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
 
     const message = await client.messages.create({
       body: `🚨 Emergency Alert!\nLocation: ${locationUrl}`,
@@ -42,4 +46,4 @@ router.post("/send-sms", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router; // 4. Use export default

@@ -1,10 +1,13 @@
-const { Signup, Login } = require('../Controllers/AuthController')
-const {userVerification} = require('../Middlewares/AuthMiddleware')
-const router = require('express').Router()
+// SAFEHER-MAIN/server/Routes/AuthRoute.js (ES Module Syntax)
 
-router.post('/signup', Signup)
-router.post('/login', Login)
-router.post('/',userVerification)
+import { Router } from 'express'; // 1. Import Router using destructuring
+import { Signup, Login } from '../Controllers/AuthController.js'; // 2. Import functions & add .js
+import { userVerification } from '../Middlewares/AuthMiddleware.js'; // 3. Import function & add .js
 
-module.exports = router
+const router = Router(); // 4. Initialize Router
 
+router.post('/signup', Signup);
+router.post('/login', Login);
+router.post('/', userVerification);
+
+export default router; // 5. Use export default

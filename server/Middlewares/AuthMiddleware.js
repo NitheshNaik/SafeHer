@@ -1,9 +1,12 @@
-const User = require('../Models/UserModel');
-const jwt = require('jsonwebtoken');
-// Ensure this path is correct to your .env file if it's not handled in index.js
-require('dotenv').config(); 
+// SAFEHER-MAIN/server/Middlewares/AuthMiddleware.js
 
-module.exports.userVerification = (req, res) => {
+import User from '../Models/UserModel.js'; // 1. Use import and add .js extension
+import jwt from 'jsonwebtoken';         // 2. Use import for jwt
+import 'dotenv/config';                  // 3. Use ESM import for dotenv
+
+// --- userVerification (ESM Export) ---
+// Note: We use 'export const' to provide the named export that AuthRoute.js is expecting.
+export const userVerification = (req, res) => {
     // Set headers to explicitly disable caching for this verification endpoint
     res.set({
         'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -16,12 +19,12 @@ module.exports.userVerification = (req, res) => {
     
     // Check 1: If no token exists, fail verification immediately
     if (!token) {
-        // Return explicit status: false (This is what the frontend expects)
+        // Return explicit status: false
         return res.status(200).json({ status: false }); 
     }
 
     // 2. Verify the token
-    // IMPORTANT: Replace 'YOUR_SECRET_KEY' with the actual variable holding your JWT secret
+    // IMPORTANT: Replace 'YOUR_SECRET_KEY_FALLBACK' with a real fallback value if needed
     jwt.verify(token, process.env.TOKEN_KEY || 'YOUR_SECRET_KEY_FALLBACK', async (err, data) => { 
         
         // Check 2: If the token is invalid or expired
@@ -32,7 +35,8 @@ module.exports.userVerification = (req, res) => {
             // 3. Find the user based on the ID stored in the token payload (data.id)
             try {
                 // Assuming your payload stores the user ID in data.id
-                const user = await User.findById(data.id); 
+                // Use .lean() for faster read operations if you don't need Mongoose methods
+                const user = await User.findById(data.id).lean(); 
                 
                 // Check 3: If user exists, verification is successful
                 if (user) {

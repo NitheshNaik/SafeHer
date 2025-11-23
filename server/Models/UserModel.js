@@ -1,5 +1,7 @@
-const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
+// SAFEHER-MAIN/server/Models/UserModel.js
+
+import mongoose from "mongoose"; // 1. Use import for mongoose
+import bcrypt from "bcryptjs";   // 2. Use import for bcrypt
 
 const userSchema = new mongoose.Schema({
   email: {
@@ -21,8 +23,15 @@ const userSchema = new mongoose.Schema({
   },
 });
 
+// Mongoose Pre-save hook for password hashing
 userSchema.pre("save", async function () {
+  // Only hash if the password field is being modified/is new
+  if (!this.isModified('password')) return;
   this.password = await bcrypt.hash(this.password, 12);
 });
 
-module.exports = mongoose.model("User", userSchema);
+// 3. Use 'export default' to make the User model the default export.
+// This matches the 'import User from "../Models/UserModel.js"' statement 
+// in your AuthController.js file.
+const User = mongoose.model("User", userSchema);
+export default User;
