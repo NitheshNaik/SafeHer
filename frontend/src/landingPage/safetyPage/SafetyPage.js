@@ -5,8 +5,8 @@ import Navbar from '../Navbar';
 
 function SafetyOverview() {
   const [contacts, setContacts] = useState([
-    { id: 1, name: "Family Contact (Mom)", phone: "555-123-4567" },
-    { id: 2, name: "Close Friend (Sarah)", phone: "555-987-6543" },
+    { id: 1, name: "Rupesh Raj", phone: "+91 70797 28978" },
+    
   ]);
   const [sosMessage, setSosMessage] = useState("I am in an emergency and need help immediately. My location is [Current Location]. Please respond.");
   const [isEditingSos, setIsEditingSos] = useState(false);

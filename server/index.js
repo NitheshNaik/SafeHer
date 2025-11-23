@@ -7,6 +7,8 @@ const app = express();
 require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const authRoute = require("./Routes/AuthRoute");
+const smsRoute = require("./Routes/smsRoute");
+
 // const { MONGO_URL, PORT } = process.env;
 const MONGO_URL = process.env.MONGO_URL;
 const PORT = process.env.port || 4000;
@@ -24,6 +26,7 @@ app.use(express.json()); // Essential for parsing JSON request bodies
 
 // --- 2. Route Middleware ---
 app.use("/", authRoute);
+app.use("/api", smsRoute);
 
 // --- 3. Database Connection ---
 mongoose.connect(MONGO_URL, {
