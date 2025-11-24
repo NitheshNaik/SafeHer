@@ -1,6 +1,7 @@
 import React from "react";
 import "./AboutPage.css"; // Import the custom CSS file
 import Navbar from '../Navbar';
+import Chatbot from "../chatBot/Chatbot";
 
 // Helper component for the Feature Grid items
 const FeatureIcon = ({ title, description, iconClass, iconBgColor }) => (
@@ -45,7 +46,8 @@ function AboutSafeHer() {
 
   return (
     <>
-    {/* <Navbar/> */}
+    <Navbar/>
+    <Chatbot/>
     <div className="safeher-page-container">
       
       

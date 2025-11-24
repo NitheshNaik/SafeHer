@@ -1,5 +1,6 @@
 import React from "react";
 import "./NotFound.css"; // Import the custom CSS file
+import Chatbot from "./chatBot/Chatbot";
 
 function NotFoundPage() {
   return (
@@ -22,6 +23,7 @@ function NotFoundPage() {
           <i className="bi bi-house-door-fill me-2"></i> Go Back Home
         </a>
       </div>
+      <Chatbot/>
     </div>
   );
 }

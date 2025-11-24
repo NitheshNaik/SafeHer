@@ -12,6 +12,7 @@ import LegalPage from './landingPage/legalPage/LegalPage';
 import ForgotPasswordPage from './landingPage/forgetPass/ForgetPassPage';
 import ContactPage from './landingPage/contactPage/ContactPage';
 import BreastScanUpload from "./landingPage/cancerPage/BreastCancerUpload";
+import Chatbot from "./landingPage/chatBot/Chatbot";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/legal" element={<LegalPage />} />
         <Route path="/forgot" element={<ForgotPasswordPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/chatbot" element={<Chatbot />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

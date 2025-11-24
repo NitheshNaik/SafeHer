@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Navbar from '../Navbar';
 import Button from "./Button";
 import Cards from "./Cards";
-import AboutSafeHer from "../aboutPage/AboutPage";
+import Chatbot from "../chatBot/Chatbot";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -74,8 +74,7 @@ const Home = () => {
             <Navbar username={username} onLogout={Logout} />
             <Button />
             <Cards />
-            <AboutSafeHer />
-            <ToastContainer />
+            <Chatbot/>
         </>
     );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./BMIpage.css"; 
 import Navbar from '../Navbar';
+import Chatbot from "../chatBot/Chatbot";
 
 // Helper function to calculate BMI (unchanged)
 const calculateBMI = (height, weight, unit) => {
@@ -68,6 +69,7 @@ function BMICalculator() {
   return (
     <>
     <Navbar/>
+    <Chatbot/>
     <div className="bmi-page-container pb-5">
       <div className="container">
         

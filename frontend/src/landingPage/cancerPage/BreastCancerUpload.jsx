@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import "./CancerPage.css"; // Assuming you have a CSS file for the styles
 import Navbar from '../Navbar'; // Assuming Navbar component is available
+import Chatbot from "../chatBot/Chatbot";
 
 // --- 1. Mock Data (Retained from Old .js for Educational Content) ---
 const educationalContent = {
@@ -93,6 +94,7 @@ export default function BreastScanUpload() {
   return (
     <>
       <Navbar/>
+      <Chatbot/>
       <div className="breast-page-container pt-4 pb-5">
         <div className="container">
           

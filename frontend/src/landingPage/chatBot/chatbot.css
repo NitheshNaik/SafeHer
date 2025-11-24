@@ -1,0 +1,163 @@
+/* --- Floating Button --- */
+.chatbot-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: white;
+    
+    /* Purple/Pink Gradient (Primary Theme Color) */
+    background: linear-gradient(135deg, #a855f7, #ec4899); 
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.5);
+    transition: transform 0.2s ease;
+    z-index: 1000;
+}
+
+.chatbot-button:hover {
+    transform: scale(1.05);
+}
+
+/* Placeholder for Icon (if Bootstrap Icons are not loaded globally) */
+.chatbot-button i::before {
+    content: "💬";
+    font-style: normal;
+}
+
+/* --- Chatbot Box Window --- */
+.chatbot-box {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    z-index: 999;
+}
+
+/* --- Header --- */
+.chatbot-header {
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: white;
+    /* Blue/Cyan Gradient for Header (Safety Theme) */
+    background: linear-gradient(135deg, #3b82f6, #06b6d4); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatbot-header i::before {
+    content: "🤖"; 
+    font-style: normal;
+}
+
+.chatbot-header .close-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+    color: white;
+}
+
+/* --- Messages Area --- */
+.chatbot-messages {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: rgb(253, 248, 255); /* Light pinkish background */
+}
+
+.system-message {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #a855f7;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgba(168, 85, 247, 0.05);
+}
+
+.message-bubble {
+    max-width: 85%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 1rem;
+    line-height: 1.4;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* User Message Styles */
+.message-bubble.user {
+    background-color: #e0f7fa; /* Light cyan/blue */
+    color: #00796b;
+    margin-left: auto;
+    border-bottom-right-radius: 0.2rem;
+}
+
+/* Bot Message Styles */
+.message-bubble.bot {
+    background-color: white;
+    border: 1px solid #f2f2f2;
+    color: #34495e;
+    margin-right: auto;
+    border-bottom-left-radius: 0.2rem;
+}
+
+
+/* --- Input Area --- */
+.chatbot-input-area {
+    display: flex;
+    padding: 0.75rem;
+    border-top: 1px solid #f0f0f0;
+    background-color: white;
+}
+
+.chat-input-field {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid #d1d9e6;
+    border-radius: 0.75rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.chat-input-field:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+.chat-send-btn {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.75rem;
+    color: white;
+    cursor: pointer;
+    
+    /* Blue/Cyan Gradient */
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    transition: background 0.2s ease;
+}
+
+.chat-send-btn i::before {
+    content: "➤"; /* Placeholder for send icon */
+    font-style: normal;
+}
+
+.chat-send-btn:hover {
+    opacity: 0.9;
+}

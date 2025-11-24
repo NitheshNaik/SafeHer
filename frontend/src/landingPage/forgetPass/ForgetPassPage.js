@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ForgetPassPage.css"; // Reuse the existing LoginPage.css for consistent styling
 import Navbar from '../Navbar';
+import Chatbot from "../chatBot/Chatbot";
 
 function ForgotPasswordPage() {
   const [email, setEmail] = useState('');
@@ -20,6 +21,7 @@ function ForgotPasswordPage() {
   return (
     <>
     <Navbar/>
+    <Chatbot/>
     <div className="login-page-container d-flex justify-content-center align-items-center min-vh-100 py-5">
       <div className="login-card p-4 p-md-5 mx-auto">
         

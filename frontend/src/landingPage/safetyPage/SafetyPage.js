@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./SafetyPage.css"; 
 import Navbar from '../Navbar';
+import Chatbot from "../chatBot/Chatbot";
 // Using the same base CSS or a dedicated SafetyOverview.css inheriting the theme
 
 function SafetyOverview() {
@@ -38,6 +39,7 @@ function SafetyOverview() {
   return (
     <>
     <Navbar/>
+    <Chatbot/>
     <div className="safety-page-container pt-4 pb-5">
       <div className="container">
         
